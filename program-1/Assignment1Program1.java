@@ -7,12 +7,13 @@ public class Assignment1Program1 {
     Scanner scanner = new Scanner(System.in);
     String input = scanner.nextLine();
     String trimmedinput = input.substring(1, input.length() - 1);
+    StringBuilder reversed = new StringBuilder(trimmedinput).reverse();
     System.out.println("\nEnter The Temperature in Farenheit: \n");
     double tempF = scanner.nextDouble();
     double tempC = (tempF - 32) * 5 / 9;
     scanner.close();
     int result = random();
-    System.out.println("\n" +tempC + trimmedinput + result);
+    System.out.println("\n" +tempC + reversed + result);
   }
   public static int random(){
     int min = 32;
